@@ -1,0 +1,162 @@
+:root   {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+        
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    
+}
+*   {
+    box-sizing: border-box;
+}
+
+a   {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--Orange);
+}
+
+img {
+    object-fit: cover;
+}
+body    {
+    background-color: var(--VeryLightGray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--VeryDarkBlue);
+
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+main    {
+    display: flex;
+    flex-direction: column;
+    margin-top:3rem;
+    margin-bottom: 5rem;
+}
+
+main > *    {
+    margin: 1rem auto;
+}
+.box    {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    inline-size: 90%;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.101);
+}
+
+.box__title  {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+}
+.mainTitle
+{
+    max-inline-size: 25ch;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: center;
+    margin: 1rem auto;
+
+}
+
+.mainTitle::first-line  {
+    font-weight: 200;
+}
+.info   {
+    padding: 0 1.5rem;
+    line-height: 1.5em;
+    color: var(--GrayishBlue);
+    text-align: center;
+}
+
+.box__info  {
+    font-weight: 400;
+    color: var(--GrayishBlue);
+    line-height: 1.5em;
+    font-size: .8em;
+}
+
+.box--topRed{
+    border-top: solid 4px var(--Red);
+}
+.box--topCyan{
+    border-top: solid 4px var(--Cyan);
+}
+.box--topOrange{
+    border-top: solid 4px var(--Orange);
+}
+.box--topBlue{
+    border-top: solid 4px var(--Blue);
+}
+
+.box__pic   {
+    max-inline-size: 25%;
+    align-self: flex-end;
+    margin: 1rem;
+}
+
+footer  {
+    margin: 0 auto;
+
+}
+.attribution    {
+    text-align: center;
+    margin: auto 1rem;
+}
+
+
+
+
+/*Desktop Style*/
+
+@media screen and (min-width:700px)    {
+    
+    main    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-inline-size: 75%;
+        margin: 0 auto;
+
+        margin-top: 2rem;
+    }
+
+
+    .info   {
+        inline-size: 55ch;
+        margin: 0 auto;
+    }
+
+
+
+    .box    {
+        max-inline-size: 90%;
+    }
+    .box--topOrange {
+        grid-column: 2/3;
+    }
+
+    .box--topBlue   {
+        grid-row: 1/2;
+        transform: translateY(50%);
+    }
+    .box--topRed    {
+        transform: translateY(50%);
+
+    }
+
+
+
+}
